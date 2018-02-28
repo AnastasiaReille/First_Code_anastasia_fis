@@ -22,11 +22,11 @@ platforms.enableBody = true;
 //create ground
 var ground = platforms.create(0,550, 'ground');
 ground.scale.setTo(2,2);
-ground.body.imovable = true;
+ground.body.immovable = true;
 //create ledges
 var ledge = platforms.create(400, 400, 'ground');
 platforms.enableBody = true;
-ledge = platforms.create();
+ledge = platfmorms.create();
 ledge.body.imovable = true;
 
 //setup text
@@ -92,7 +92,7 @@ function update(){
      player.frame = 4;
     }
 if(cursors.up.isDown && player.body.touching.down){
-	player.body.velocity.y = -300
+	player.body.velocity.y = -300;
     }
 
 }
