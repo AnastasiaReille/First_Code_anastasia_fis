@@ -54,7 +54,7 @@ player = game.add.sprite(32,400, 'dude')
       stars = game.add.physicsGroup();
       stars.enableBody = true;
       //use a loop to  create 12 stars
-      for(var i = 0; i< 12; i ++0){
+      for(var i = 0; i< 12; i ++){
       	var star = stars.create(i * 70,0, 'star');
       	star.body.gravity.y = 200;
       	star.body.bonce.y =0.7 + Math.random()* 0.2;
