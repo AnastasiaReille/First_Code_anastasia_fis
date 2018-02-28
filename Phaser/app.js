@@ -69,8 +69,8 @@ player = game.add.sprite(32,400, 'dude')
 
 
 function update(){
-   game.physics.acrade.collision(player,platforms);
-   game.physics.acrade.collision(stars,platforms);
+   game.physics.acrade.collide(player,platforms);
+   game.physics.acrade.collide(stars,platforms);
     game.physics.acrade.collision(enemy1,platforms);
 
     //set player velocity to  if no events
@@ -87,5 +87,5 @@ function update(){
 if(cursors.up.isDown && player.body.touching.down){
 	player.body.velocity.y = -300
     }
-    
+
 }
