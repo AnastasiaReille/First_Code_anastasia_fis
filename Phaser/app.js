@@ -37,8 +37,55 @@ scorelabel = game.add.text(300,560,"Score:",style);
 scoretext = game.add.text(420,560,score,style);
 lifelabel = game.add.text(10,5,"Lives:",style);
 lifelabel = game.add.text(120,5,lives,style);
+
+
+
+//lesson 8
+player = game.add.sprite(32,400, 'dude')
+    player.animation.add('left',[0,1],10,true);
+    player.animation.add('right',[2,3],10,true);
+    game.physics.acrade.enable(player);
+    player.body.gravity.y= 300;
+    player.body.bounce.y= 0.5;
+    enem1.body.colliderWorldBounds = true;
+
+
+      //create stars
+      stars = game.add.physicsGroup();
+      stars.enableBody = true;
+      //use a loop to  create 12 stars
+      for(var i = 0; i< 12; i ++0){
+      	var star = stars.create(i * 70,0, 'star');
+      	star.body.gravity.y = 200;
+      	star.body.bonce.y =0.7 + Math.random()* 0.2;
+      }
+
+      //create keyboard entries
+      cursors = game.input.keyboard.createCursorKeys();
+
+
 }
 
-function update(){
 
+
+function update(){
+   game.physics.acrade.collision(player,platforms);
+   game.physics.acrade.collision(stars,platforms);
+    game.physics.acrade.collision(enemy1,platforms);
+
+    //set player velocity to  if no events
+    player.body.veocity.x = 0;
+
+    if(cursors.left.isDown){
+    	//move left
+    	player.animation.play('left');
+    	player.body.velocity.x = 150;
+    }else{
+     player.animations.stop();
+     player.frame = 4;
+    }
+if(cursors.up.isDown && player.body.touching.down){
+	player.body.velocity.y = -300
+    }
+    
 }
