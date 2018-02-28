@@ -26,7 +26,7 @@ ground.body.immovable = true;
 //create ledges
 var ledge = platforms.create(400, 400, 'ground');
 platforms.enableBody = true;
-ledge = platfmorms.create();
+ledge = platforms.create();
 ledge.body.immovable = true;
 
 //setup text
