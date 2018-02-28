@@ -76,9 +76,9 @@ enemy1 = game.add.sprite(32,400, 'baddie')
 
 
 function update(){
-   game.physics.acrade.collide(player,platforms);
-   game.physics.acrade.collide(stars,platforms);
-    game.physics.acrade.collision(enemy1,platforms);
+   game.physics.arcade.collide(player,platforms);
+   game.physics.arcade.collide(stars,platforms);
+    game.physics.arcade.collide(enemy1,platforms);
 
     //set player velocity to  if no events
     player.body.velocity.x = 0;
