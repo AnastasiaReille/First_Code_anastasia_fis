@@ -64,7 +64,7 @@ enemy1 = game.add.sprite(32,400, 'baddie')
       for(var i = 0; i< 12; i ++){
       	var star = stars.create(i * 70,0, 'star');
       	star.body.gravity.y = 200;
-      	star.body.bonce.y =0.7 + Math.random()* 0.2;
+      	star.body.bounce.y =0.7 + Math.random()* 0.2;
       }
 
       //create keyboard entries
@@ -81,7 +81,7 @@ function update(){
     game.physics.acrade.collision(enemy1,platforms);
 
     //set player velocity to  if no events
-    player.body.veocity.x = 0;
+    player.body.velocity.x = 0;
 
     if(cursors.left.isDown){
     	//move left
