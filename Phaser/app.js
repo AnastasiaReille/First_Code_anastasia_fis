@@ -27,7 +27,7 @@ ground.body.immovable = true;
 var ledge = platforms.create(400, 400, 'ground');
 platforms.enableBody = true;
 ledge = platfmorms.create();
-ledge.body.imovable = true;
+ledge.body.immovable = true;
 
 //setup text
 var style = {font: "bold 32px Arial ", fill:  "#fff"};
@@ -85,9 +85,13 @@ function update(){
 
     if(cursors.left.isDown){
     	//move left
-    	player.animation.play('left');
+    	player.animations.play('left');
+    	player.body.velocity.x = -150;
+    } else if(cursors.right.isDown){
+    	//move left
+    	player.animations.play('right');
     	player.body.velocity.x = 150;
-    }else{
+    } else{
      player.animations.stop();
      player.frame = 4;
     }
