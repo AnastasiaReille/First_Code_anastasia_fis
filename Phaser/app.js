@@ -25,8 +25,6 @@ ground.scale.setTo(2,2);
 ground.body.immovable = true;
 //create ledges
 var ledge = platforms.create(400, 400, 'ground');
-platforms.enableBody = true;
-ledge = platforms.create();
 ledge.body.immovable = true;
 
 //setup text
