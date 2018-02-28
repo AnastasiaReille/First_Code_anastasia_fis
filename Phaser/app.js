@@ -42,12 +42,12 @@ lifelabel = game.add.text(120,5,lives,style);
 
 //lesson 8
 player = game.add.sprite(32,400, 'dude')
-    player.animation.add('left',[0,1],10,true);
-    player.animation.add('right',[2,3],10,true);
-    game.physics.acrade.enable(player);
+    player.animations.add('left',[0,1],10,true);
+    player.animations.add('right',[2,3],10,true);
+    game.physics.arcade.enable(player);
     player.body.gravity.y= 300;
     player.body.bounce.y= 0.5;
-    enem1.body.colliderWorldBounds = true;
+    enem1.body.collideWorldBounds = true;
 
 
       //create stars
