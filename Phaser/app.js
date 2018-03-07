@@ -1,3 +1,4 @@
+
 var game = new Phaser.Game(800, 600, Phaser.AUTO,'',{preload:preload, create:create, update:update});
 var score = 0;
 var lives = 3;
@@ -96,5 +97,75 @@ function update(){
 if(cursors.up.isDown && player.body.touching.down){
 	player.body.velocity.y = -300;
     }
+//lesson 9
+game.physics.acrade.overlap(player, stars, collectStar);
+game.physics.acrade.overlap(player, stars, loseLife);
+
+//call function move Enemy
+moveEnemy();
+
+//check if game over
+if(lives = 0){
+   endGame();
+   }
 
 }
+
+
+function endGame(){
+player.kill();
+scorelabel.text = "GAME OVER! you scored " +score;
+scoretext.visibile = false;
+lifelabel.visible = false;
+lifetext.visible = false;
+}
+
+function moveEnemy(){
+  if(enemy1.x > 759){
+  enemy1.animation.play('left');
+  enemy1.body.velocity.x = -120;
+  }else if(enemy1.x < 405){
+    enemy1.animation.play('right');
+  enemy1.body.velocity.x = 120;
+  }
+
+}
+
+function loseLIfe(player,enemy){
+  lives -= 1; //sample as lives = live - 1
+  lifetext.setText(lives);
+
+    enemy.kill();
+    enemy.reset(10, 20);
+
+}
+ function collectStars(player,star){
+  score += 1;
+  scoretext.setText(score);
+
+  star.kill();
+  star.reset(Math.random()* 750, 0)
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
