@@ -131,7 +131,7 @@ function moveEnemy(){
 
 }
 
-function loseLIfe(player,enemy){
+function loseLife(player,enemy){
   lives -= 1; //sample as lives = live - 1
   lifetext.setText(lives);
 
@@ -139,7 +139,7 @@ function loseLIfe(player,enemy){
     enemy.reset(10, 20);
 
 }
- function collectStars(player,star){
+ function collectStar(player,star){
   score += 1;
   scoretext.setText(score);
 
