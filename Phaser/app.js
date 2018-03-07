@@ -99,7 +99,7 @@ if(cursors.up.isDown && player.body.touching.down){
     }
 //lesson 9
 game.physics.arcade.overlap(player, stars, collectStar);
-game.physics.arcade.overlap(player, stars, loseLife);
+game.physics.arcade.overlap(player, enemy1, loseLife);
 
 //call function move Enemy
 moveEnemy();
