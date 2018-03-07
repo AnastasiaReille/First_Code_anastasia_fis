@@ -98,8 +98,8 @@ if(cursors.up.isDown && player.body.touching.down){
 	player.body.velocity.y = -300;
     }
 //lesson 9
-game.physics.acrade.overlap(player, stars, collectStar);
-game.physics.acrade.overlap(player, stars, loseLife);
+game.physics.arcade.overlap(player, stars, collectStar);
+game.physics.arcade.overlap(player, stars, loseLife);
 
 //call function move Enemy
 moveEnemy();
