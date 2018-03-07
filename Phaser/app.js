@@ -35,7 +35,7 @@ var style = {font: "bold 32px Arial ", fill:  "#fff"};
 scorelabel = game.add.text(300,560,"Score:",style);
 scoretext = game.add.text(420,560,score,style);
 lifelabel = game.add.text(10,5,"Lives:",style);
-lifelabel = game.add.text(120,5,lives,style);
+lifetext = game.add.text(120,5,lives,style);
 
 
 
