@@ -105,7 +105,7 @@ game.physics.arcade.overlap(player, enemy1, loseLife);
 moveEnemy();
 
 //check if game over
-if(lives = 0){
+if(lives <= 0){
    endGame();
    }
 
@@ -115,7 +115,7 @@ if(lives = 0){
 function endGame(){
 player.kill();
 scorelabel.text = "GAME OVER! you scored " +score;
-scoretext.visibile = false;
+scoretext.visible = false;
 lifelabel.visible = false;
 lifetext.visible = false;
 }
@@ -146,26 +146,4 @@ function loseLife(player,enemy){
   star.kill();
   star.reset(Math.random()* 750, 0)
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
