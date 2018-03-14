@@ -53,7 +53,7 @@ enemy1 = game.add.sprite(32,400, 'baddie')
     enemy1.animations.add('right',[2,3],10,true);
     game.physics.arcade.enable(enemy1);
     enemy1.body.gravity.y= 300;
-    enemy1.body.bounce.y= 0.5;
+    enemy1.body.bounce.y= 0.2;
     enemy1.body.collideWorldBounds = true;
 
       //create stars
