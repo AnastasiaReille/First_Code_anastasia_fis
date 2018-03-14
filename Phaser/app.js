@@ -124,7 +124,7 @@ function moveEnemy(){
   if(enemy1.x > 759){
   enemy1.animations.play('left');
   enemy1.body.velocity.x = -120;
-  }else if(enemy1.x < 10){
+  }else if(enemy1.x < 35){
     enemy1.animations.play('right');
   enemy1.body.velocity.x = 120;
   }
