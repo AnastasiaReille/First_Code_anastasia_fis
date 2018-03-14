@@ -28,7 +28,7 @@ ground.body.immovable = true;
 var ledge = platforms.create(400, 400, 'ground');
 ledge.body.immovable = true;
 
-var ledge = platforms.create(-100, 200, 'ground');
+var ledge = platforms.create(-100, 340, 'ground');
 ledge.body.immovable = true;
 
 //setup text
