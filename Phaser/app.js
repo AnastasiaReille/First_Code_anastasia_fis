@@ -28,6 +28,9 @@ ground.body.immovable = true;
 var ledge = platforms.create(400, 400, 'ground');
 ledge.body.immovable = true;
 
+var ledge = platforms.create(600, 600, 'ground');
+ledge.body.immovable = true;
+
 //setup text
 var style = {font: "bold 32px Arial ", fill:  "#fff"};
 
